@@ -1,0 +1,26 @@
+config MTK_IRTX_PWM_SUPPORT
+	tristate "Mediatek PWM IR transmitter"
+	depends on RC_CORE
+	depends on ARCH_MEDIATEK
+	depends on MTK_PWM
+	help
+	   Say Y if you want to use the PWM IR transmitter
+	   on Mediatek SoCs.
+
+	   To compile this driver as a module, choose M here: the
+	   module will be called mtk-irtx-pwm.
+
+config IR_LED_EXTERNAL_LDO
+	tristate "IR transmitter use extern ldo"
+	default n
+
+config IR_LED_USE_VBAT_POWER
+	tristate "IR transmitter use vbat power"
+	default n
+    
+config IR_LED_GPIO_CTRL_LDO
+	tristate "IR transmitter use gpio control ldo"
+	default n
+
+
+
